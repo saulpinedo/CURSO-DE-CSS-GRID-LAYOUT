@@ -1,0 +1,39 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.container{
+    display: grid;
+    /* grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 200px 100px; */
+    /* grid-template: filas / columnas; */
+    grid-template: repeat(4, 1fr)/[inicio]1fr[linea2]1fr[linea3]1fr[linea4]1fr[linea5]1fr[linea6]1fr[linea7]1fr[fin];
+    /* grid-column-gap: 30px;
+    grid-row-gap: 50px;  gap sirve para dar margen*/
+    grid-gap: 10px ;
+    height: 100vh;
+
+}
+.item{
+    background:lightskyblue;
+    border: solid 1px red;
+    padding: 10px;
+}
+.item:nth-of-type(1){
+    background-color: red;
+    grid-column: inicio / linea3;
+    grid-row: 1 /span 2;
+}
+.item:nth-of-type(2){
+    grid-column: linea3 /fin;
+    grid-row: 1 / 0;
+}
+.item:nth-of-type(3){
+    grid-column: linea3 / linea5;
+}
+.item:nth-of-type(4){
+    grid-column: linea5 / fin;
+}
+.item:nth-of-type(5){
+    grid-column: inicio/ fin;
+}
