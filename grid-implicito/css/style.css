@@ -1,20 +1,19 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-
 }
 .container{
     display: grid;
-    /* grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 200px 100px; */
-    /* grid-template: filas / columnas; */
-    grid-template: [iniciov]1fr[iniciov2]1fr[finalv]/[inicio]1fr[linea2]1fr[linea3]1fr[linea4]1fr[linea5]1fr[linea6]1fr[linea7]1fr[fin];
-    /* grid-column-gap: 30px;
-    grid-row-gap: 50px;  gap sirve para dar margen*/
-    grid-gap: 10px ;
+    grid-template-columns: 
+    [inicio]1fr[linea2]1fr[linea3]1fr[linea4]1fr
+    [linea5]1fr[linea6]1fr[linea7]1fr[fin];
+    grid-template-rows: [iniciov]1fr[iniciov2]1fr[iniciov3];
+    grid-gap: 5px ;
     height: 100vh;
+    /* solo hara efecto el ancho o el alto cuando ocupes el flow respectivo */
     grid-auto-flow: column;
-    grid-auto-columns: 100px 50px;
-    grid-auto-rows: 20px 70px;
+    grid-auto-columns: 100px 10px;
+    grid-auto-rows: 50px 20px;
+    
 }
 .item{
     background:lightskyblue;
@@ -23,18 +22,22 @@ body{
 }
 .item:nth-of-type(1){
     background-color: red;
-    grid-column: inicio / linea3;
-    grid-row: iniciov/finalv;
+    grid-column: inicio / span 3;
+    grid-row: iniciov/iniciov3;
 }
 .item:nth-of-type(2){
-    grid-column: linea3 /final;
+    grid-column: linea4 /span 2;
+    grid-row:iniciov/iniciov3;
 }
 .item:nth-of-type(3){
-    grid-column: linea3 / linea4;
+    grid-column: linea6 /fin;
+    
 }
 .item:nth-of-type(4){
-    grid-column: linea4 / linea5;
+    grid-column: linea6/span 1;
+    grid-row: iniciov2/iniciov3;
 }
 .item:nth-of-type(5){
-    grid-column: linea5/ final;
+    grid-column:  linea7/fin;
+    grid-row: iniciov2/iniciov3;
 }
