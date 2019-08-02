@@ -6,13 +6,16 @@ body{
     grid-gap: 5px ;
     height: 100vh;
     
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(3,200px);
+    grid-template-rows: repeat(4,100px);
     
-    justify-items: center;
-    /* start end center stretch */
-    align-items: flex-end;
+    /* justify-items: center;
+    align-items: flex-end; */
     
+    justify-content:center;
+    /* start end center stretch space-atound
+        space-between space-evenly*/
+    align-content: center;
 }
 .item{
     background:lightskyblue;
@@ -34,6 +37,6 @@ body{
     
 }
 .item:nth-of-type(5){
-  align-self: flex-start;
-  justify-self: start
+  /* align-self: flex-start;
+  justify-self: start */
 }
