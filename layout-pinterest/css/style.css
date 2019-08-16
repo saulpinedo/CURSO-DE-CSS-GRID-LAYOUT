@@ -9,7 +9,7 @@ body{
     justify-content: center;
 }
 .level-1{
-    overflow: hidden;
+    /* overflow: hidden; */
     grid-row-end: span 3;
 }
 .level-1 img{
@@ -18,7 +18,7 @@ body{
     height: 100%;
 }
 .level-2{
-    overflow: hidden;
+    /* overflow: hidden; */
     grid-row-end: span 2;
 }
 .level-2 img{
@@ -27,7 +27,7 @@ body{
     height: 100%;
 }
 .level-3{
-    overflow: hidden;
+    /* overflow: hidden; */
     grid-row-end: span 1;
 }
 .level-3 img{
